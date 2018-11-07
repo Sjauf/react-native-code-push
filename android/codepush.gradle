@@ -98,7 +98,7 @@ gradle.projectsEvaluated {
 
             recordFilesBeforeBundleCommand.dependsOn("merge${targetName}Resources")
             recordFilesBeforeBundleCommand.dependsOn("merge${targetName}Assets")
-            runBefore("bundle${targetName}JsAndAssets", recordFilesBeforeBundleCommand)
+            //runBefore("bundle${targetName}JsAndAssets", recordFilesBeforeBundleCommand)
 
             // We need to generate and record the resources map, but we use it to generate the bundle hash
             generateBundledResourcesHash.dependsOn("recordFilesBeforeBundleCommand${targetName}")
